@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/fmanimashaun/carousel-component/static/css/main.2a324a04.css",
-    "main.js": "/fmanimashaun/carousel-component/static/js/main.08940777.js",
-    "index.html": "/fmanimashaun/carousel-component/index.html",
-    "main.2a324a04.css.map": "/fmanimashaun/carousel-component/static/css/main.2a324a04.css.map",
-    "main.08940777.js.map": "/fmanimashaun/carousel-component/static/js/main.08940777.js.map"
+    "main.css": "/carousel-component/static/css/main.2a324a04.css",
+    "main.js": "/carousel-component/static/js/main.08940777.js",
+    "index.html": "/carousel-component/index.html",
+    "main.2a324a04.css.map": "/carousel-component/static/css/main.2a324a04.css.map",
+    "main.08940777.js.map": "/carousel-component/static/js/main.08940777.js.map"
   },
   "entrypoints": [
     "static/css/main.2a324a04.css",
