@@ -1,8 +1,8 @@
-import React from 'react'
+import Styles from '../assets/css/carousel.module.css';
 
 const Carousel = () => {
   return (
-    <div>
+    <div className={Styles.carousel}>
       hello from carousel
     </div>
   )
