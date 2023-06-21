@@ -1,15 +1,16 @@
-# Tabby Component Project
+# Carousel Component Project
 ## Overview
-The Tabby Component Project is a simple, yet interactive, React application that showcases the use of tabs to display different sets of content. The application features three tabs, each representing a popular franchise: Digimon, Pokémon, and Tamagotchi. When a tab is selected, the corresponding content for that franchise is displayed, providing a seamless user experience.
+The Carousel Component is a versatile and user-friendly slideshow component that allows you to showcase multiple items or images in an interactive and engaging manner. It features arrow buttons on the sides for sliding through the carousel and dotted buttons at the bottom for quick navigation to specific slides.
 
 ## Features
-Tabbed Interface: The application uses a tabbed interface to organize content. This allows users to easily navigate between different sets of content.
+- **Slide Navigation:** The Carousel Component allows users to navigate through the slides using the left and right arrow buttons. When the slide is at the first position, the left arrow becomes hidden, and when the slide is at the last position, the right arrow becomes hidden, providing a seamless scrolling experience.
 
-Interactive UI: The application provides visual feedback to the user by highlighting the active tab. This makes it easy for users to understand which tab's content is currently being displayed.
+- **Dotted Button Navigation:** The Carousel Component also provides dotted buttons at the bottom, representing each slide. Users can click on these buttons to quickly jump to a specific slide, enhancing the user's control and navigation experience.
 
-Responsive Design: The application is designed to be responsive and can adapt to different screen sizes. This ensures a consistent user experience across different devices.
+- **Responsive Design:** The Carousel Component is designed to be responsive, ensuring that it adapts to different screen sizes and devices. It will provide an optimal viewing experience across desktops, tablets, and mobile devices.
 
-> [Live Demo Link](https://fmanimashaun.github.io/tabby-component/)
+
+> [Live Demo Link](https://fmanimashaun.github.io/carousel-component//)
 
 ## Demo
 
@@ -18,8 +19,8 @@ Responsive Design: The application is designed to be responsive and can adapt to
 ## Installation
 To install and run this project locally, you'll need to have Node.js and npm installed. Follow these steps:
 
-Clone the repository: `git clone https://github.com/fmanimashaun/tabby-component.git
-Navigate to the project folder: `cd tabby-component`
+Clone the repository: `git clone https://github.com/fmanimashaun/carousel-component.git
+Navigate to the project folder: `cd carousel-component`
 Install the dependencies: `npm install`
 Start the project: `npm start`
 
