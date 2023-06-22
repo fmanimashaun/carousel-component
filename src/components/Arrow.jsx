@@ -18,13 +18,13 @@ const Arrow = () => {
       <button
         className={Styles.arrow__left}
         hidden={activeSlider === 0 ? true : false}
-        onClick={prevSlider}>
+        onClick={() => prevSlider()}>
         <img src={Left} alt="left icon" />
       </button>
       <button
         className={Styles.arrow__right}
         hidden={activeSlider === 2 ? true : false}
-        onClick={nextSlider}>
+        onClick={() => nextSlider()}>
         <img src={Right} alt="right icon" />
       </button>
     </div>
