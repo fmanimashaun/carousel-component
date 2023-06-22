@@ -1,13 +1,13 @@
 # Carousel Component Project
 ## Overview
-The Carousel Component is a versatile and user-friendly slideshow component that allows you to showcase multiple items or images in an interactive and engaging manner. It features arrow buttons on the sides for sliding through the carousel and dotted buttons at the bottom for quick navigation to specific slides.
+The Carousel Component is more than just a slideshow component. It's a testament to the power of React and modern JavaScript, showcasing multiple items or images in an interactive and engaging manner. This project features intuitive navigation controls, including arrow buttons for slide-through navigation and dotted buttons for quick slide selection.
 
 ## Features
-- **Slide Navigation:** The Carousel Component allows users to navigate through the slides using the left and right arrow buttons. When the slide is at the first position, the left arrow becomes hidden, and when the slide is at the last position, the right arrow becomes hidden, providing a seamless scrolling experience.
+- **Contextual Slide Navigation:** The Carousel Component leverages the power of React's Context API to manage the state of the active slide. This ensures a seamless scrolling experience, with the left arrow becoming hidden at the first slide and the right arrow disappearing at the last slide.
 
-- **Dotted Button Navigation:** The Carousel Component also provides dotted buttons at the bottom, representing each slide. Users can click on these buttons to quickly jump to a specific slide, enhancing the user's control and navigation experience.
+- **Dynamic Dotted Button Navigation:** The Carousel Component doesn't just provide static navigation dots. Each dot is dynamically generated and linked to a specific slide, allowing users to jump to any slide with a single click. This enhances the user's control and navigation experience.
 
-- **Responsive Design:** The Carousel Component is designed to be responsive, ensuring that it adapts to different screen sizes and devices. It will provide an optimal viewing experience across desktops, tablets, and mobile devices.
+- **Responsive Design with CSS Modules:** The Carousel Component is not just responsive, it's stylish. Using CSS Modules, each component has its own CSS file, ensuring styles are scoped to the component and reducing the risk of style conflicts.
 
 
 > [Live Demo Link](https://fmanimashaun.github.io/carousel-component//)
@@ -23,6 +23,59 @@ Clone the repository: `git clone https://github.com/fmanimashaun/carousel-compon
 Navigate to the project folder: `cd carousel-component`
 Install the dependencies: `npm install`
 Start the project: `npm start`
+
+## Code Highlights
+
+This project demonstrates advanced React techniques and best practices. Here are some highlights:
+- **Context API for State Management:** The `SliderContext` and `SliderProvider` components demonstrate the use of React's Context API for state management. This allows child components to access and modify the active slide without prop drilling.
+```javascript
+// SliderContext.js file
+import { createContext, useState } from "react";
+
+const SliderContext = createContext();
+
+const SliderProvider = ({ children }) => {
+  const [activeSlider, setActiveSlider] = useState(0);
+
+  const nextSlider = () => {
+    setActiveSlider(activeSlider + 1);
+  };
+
+  const prevSlider = () => {
+    setActiveSlider(activeSlider - 1);
+  };
+
+  const handleSlider = (index) => {
+    setActiveSlider(index);
+  }
+
+  return (
+    <SliderContext.Provider value={{ activeSlider, nextSlider, prevSlider, handleSlider }}>
+      {children}
+    </SliderContext.Provider>
+  );
+};
+
+export { SliderProvider, SliderContext };
+
+```
+
+- **Dynamic Image Import:** The `SliderContainer` component demonstrates how to dynamically import images using Webpack's require.context function. This allows the carousel to automatically include all images in the sliders folder.
+
+```javascript 
+// Import all images from the sliders folder
+const importAll = (r) => r.keys().map(r);
+const sliderImgs = importAll(
+  require.context('../assets/img/sliders', false, /\.(png|jpe?g|svg)$/),
+);
+
+```
+
+- **Responsive Design with CSS Modules:** The project uses CSS Modules to ensure styles are scoped to the component, reducing the risk of style conflicts. This is demonstrated in the `Arrow`, `DotNav`, and `SliderContainer` components.
+
+```javascript
+import Styles from '../assets/css/carousel.module.css';
+```
 
 ## Author
 
