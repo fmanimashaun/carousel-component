@@ -15,6 +15,8 @@
   position: relative;
   width: 100%;
   list-style: none;
+  transform: translateX(0);
+  transition: transform 0.5s ease-out;
 }
 
 .carousel__item {

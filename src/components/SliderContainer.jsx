@@ -22,7 +22,7 @@ const SliderContainer = () => {
       const slideWidth = slides[0].getBoundingClientRect().width;
 
       // Set the left property of carousel__contents
-      carouselRef.current.style.left = `${-activeSlider * slideWidth}px`;
+      carouselRef.current.style.transform = `translateX(${-activeSlider * slideWidth}px)`;
 
       // Set the left property of each slide
       Array.from(slides).forEach((slide, index) => {
